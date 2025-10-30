@@ -21,21 +21,24 @@ const featureCards = [
   },
 ];
 
-const steps = [
+const roadmapMilestones = [
   {
+    phase: 'Phase 1',
     title: 'Welcome Packet',
     copy:
-      'Receive a curated collection of three proverbs that set the tone for the Proverba experience.',
+      'Immediate email bundle with three signature proverbs, pronunciation tips, and a short guide to start your daily reflection habit.',
   },
   {
-    title: 'Early Access Launch',
+    phase: 'Phase 2',
+    title: 'iOS Early Access',
     copy:
-      'Get access to the mobile app before the public launch, with direct channels to the product team.',
+      'First access arrives on iOS through TestFlight, plus direct feedback lanes so you can help shape the Android experience before it opens.',
   },
   {
-    title: 'Lifetime Founder Pricing',
+    phase: 'Phase 3',
+    title: 'Launch & Founder Pricing',
     copy:
-      'Keep your exclusive rate for future premium features, including audio stories and reflection recaps.',
+      'We roll out Android followed by the web app and lock your lifetime preferred pricing—complete with audio stories, reflection recaps, and community spotlights.',
   },
 ];
 
@@ -242,15 +245,23 @@ const Landing = () => {
         </section>
 
         <section className="px-6">
-          <h2 className="mb-10 text-center text-3xl font-semibold">What Happens After You Sign Up</h2>
+          <h2 className="mb-6 text-center text-3xl font-semibold">Early Adopter Roadmap</h2>
+          <p className="mx-auto mb-10 max-w-2xl text-center text-base text-text-muted">
+            Track each phase as Proverba launches on iOS first, then Android, and finally on the web—every step keeps you close to the build and invites your feedback.
+          </p>
           <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
-            {steps.map((step, index) => (
-              <article key={step.title} className="glass-card-light rounded-2xl p-6">
-                <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(94,234,212,0.16)] text-base font-bold text-accent">
-                  {index + 1}
-                </span>
-                <h3 className="mb-3 text-lg font-semibold text-slate-100">{step.title}</h3>
-                <p className="text-sm text-text-muted">{step.copy}</p>
+            {roadmapMilestones.map((milestone, index) => (
+              <article key={milestone.title} className="glass-card-light rounded-2xl p-6">
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(94,234,212,0.16)] text-base font-bold text-accent">
+                    {index + 1}
+                  </span>
+                  <span className="rounded-full bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                    {milestone.phase}
+                  </span>
+                </div>
+                <h3 className="mb-3 text-lg font-semibold text-slate-100">{milestone.title}</h3>
+                <p className="text-sm text-text-muted">{milestone.copy}</p>
               </article>
             ))}
           </div>
