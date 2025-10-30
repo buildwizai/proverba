@@ -20,8 +20,8 @@ npm run dev
 Visit `http://localhost:5173` to preview the SPA. Tailwind classes hot-reload via Vite.
 
 ## Form Handling
-- The visible form lives in `src/pages/Landing.jsx` and dispatches `submitFormRequest` to Redux.
-- `src/state/sagas.js` encodes the payload and POSTs to Netlify (`/`) so submissions continue registering under **Forms → subscribe**.
+- The visible form lives in `src/pages/Landing.jsx`; in production we let the native POST reach Netlify Forms, while local dev (`npm run dev`) dispatches `submitFormRequest` to simulate success without a backend.
+- `src/state/sagas.js` encodes the payload and would POST to Netlify (`/`) when running Netlify Dev or other integrations, keeping submissions registering under **Forms → subscribe**.
 - A hidden static form in `index.html` keeps Netlify’s build-time parser aware of the `subscribe` schema (email + consent checkboxes + honeypot).
 
 To emulate Netlify locally:

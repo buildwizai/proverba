@@ -55,10 +55,17 @@ const Landing = () => {
   }, [submittedEmail, navigate]);
 
   const handleSubmit = (event) => {
-    event.preventDefault();
     if (botField.trim()) {
+      event.preventDefault();
       return;
     }
+
+    if (!import.meta.env.DEV) {
+      // In production let Netlify handle the POST/redirect without AJAX.
+      return;
+    }
+
+    event.preventDefault();
     dispatch(
       submitFormRequest({
         email,
@@ -132,6 +139,7 @@ const Landing = () => {
                 type="checkbox"
                 name="consent_privacy"
                 className="mt-1 h-4 w-4 accent-accent"
+                value="yes"
                 checked={consentPrivacy}
                 onChange={(event) => setConsentPrivacy(event.target.checked)}
                 required
@@ -149,6 +157,7 @@ const Landing = () => {
                 type="checkbox"
                 name="consent_marketing"
                 className="mt-1 h-4 w-4 accent-accent"
+                value="yes"
                 checked={consentMarketing}
                 onChange={(event) => setConsentMarketing(event.target.checked)}
                 required
