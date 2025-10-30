@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import ProverbBubble from '../components/ProverbBubble.jsx';
 import { resetForm, submitFormRequest } from '../state/form.js';
 
 const featureCards = [
@@ -284,6 +285,7 @@ const Landing = () => {
           © {currentYear} Proverba · Crafted for intentional moments
         </p>
       </footer>
+      <ProverbBubble />
     </div>
   );
 };
