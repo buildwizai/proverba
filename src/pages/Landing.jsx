@@ -51,6 +51,7 @@ const Landing = () => {
       setEmail('');
       setConsentPrivacy(false);
       setConsentMarketing(false);
+      setBotField('');
     }
   }, [submittedEmail]);
 
@@ -75,11 +76,11 @@ const Landing = () => {
     <div className="min-h-screen bg-hero text-text-base">
       <header className="mx-auto flex max-w-5xl flex-col items-center px-6 pb-12 pt-16 text-center md:pb-16">
         <img
-          className="mb-6 w-24 drop-shadow-[0_14px_28px_rgba(249,115,22,0.18)] md:w-28"
-          src="/assets/proverba-logo.svg"
+          className="mb-6 w-24 drop-shadow-[0_14px_28px_rgba(94,234,212,0.22)] md:w-28"
+          src="/proverba-logo.svg"
           alt="Proverba logo"
         />
-        <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-[rgba(249,115,22,0.15)] px-4 py-2 text-sm font-semibold tracking-wide text-accent">
+        <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-[rgba(94,234,212,0.16)] px-4 py-2 text-sm font-semibold tracking-wide text-accent">
           Founding Circle Invitation
         </span>
         <h1 className="mb-4 max-w-3xl text-3xl font-bold leading-tight md:text-5xl">
@@ -95,19 +96,19 @@ const Landing = () => {
           </p>
           {submittedEmail ? (
             <div className="grid gap-6 text-left">
-              <div className="rounded-2xl border border-accent/50 bg-gradient-to-br from-[rgba(249,115,22,0.22)] via-[rgba(15,23,42,0.72)] to-[rgba(15,23,42,0.9)] p-6 shadow-[0_22px_46px_rgba(249,115,22,0.28)]">
+              <div className="rounded-2xl border border-accent/50 bg-gradient-to-br from-[rgba(94,234,212,0.28)] via-[rgba(12,31,56,0.72)] to-[rgba(7,20,38,0.92)] p-6 shadow-[0_22px_46px_rgba(94,234,212,0.25)]">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-orange-400 text-2xl font-semibold text-primary shadow-[0_0_22px_rgba(249,115,22,0.45)]">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-sky text-2xl font-semibold text-primary shadow-[0_0_22px_rgba(94,234,212,0.45)]">
                     ✓
                   </span>
                   <div className="space-y-3 text-text-muted">
-                    <h2 className="text-2xl font-semibold text-slate-100">You're on the list</h2>
-                    <p className="text-sm leading-relaxed sm:text-base">
+                    <h2 className="text-2xl font-semibold text-text-base">You're on the list</h2>
+                    <p className="text-sm leading-relaxed sm:text-base text-text-muted">
                       Thanks for joining the Proverba founding circle. We just sent a confirmation to{' '}
-                      <span className="font-semibold text-slate-100">{submittedEmail}</span>. Watch your inbox for the welcome
+                      <span className="font-semibold text-text-base">{submittedEmail}</span>. Watch your inbox for the welcome
                       packet and your first proverb drop.
                     </p>
-                    <p className="text-sm leading-relaxed sm:text-base">
+                    <p className="text-sm leading-relaxed sm:text-base text-text-muted">
                       Need to update your preferences? Reach the team anytime at{' '}
                       <a className="font-semibold text-accent underline-offset-2 hover:underline" href="mailto:buildwizai@gmail.com">
                         buildwizai@gmail.com
@@ -120,7 +121,7 @@ const Landing = () => {
               <button
                 type="button"
                 onClick={() => dispatch(resetForm())}
-                className="rounded-xl border border-accent/50 px-4 py-3 text-base font-semibold text-accent transition duration-150 ease-in-out hover:-translate-y-0.5 hover:bg-accent/10 hover:shadow-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary"
+                className="rounded-xl border border-accent/50 px-4 py-3 text-base font-semibold text-accent transition duration-150 ease-in-out hover:-translate-y-0.5 hover:bg-accent/15 hover:shadow-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary"
               >
                 Add another founding-circle invite
               </button>
@@ -161,7 +162,7 @@ const Landing = () => {
                   placeholder="you@email.com"
                   required
                   autoComplete="email"
-                  className="w-full rounded-xl border border-slate-500/40 bg-primary/60 px-4 py-3 text-base text-slate-100 placeholder:text-slate-300/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent"
+                  className="w-full rounded-xl border border-white/10 bg-primary/60 px-4 py-3 text-base text-slate-100 placeholder:text-slate-300/70 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent"
                 />
                 <label className="flex items-start gap-3 text-sm text-text-muted">
                   <input
@@ -201,7 +202,7 @@ const Landing = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="rounded-xl bg-gradient-to-br from-accent to-orange-400 px-4 py-3 text-base font-semibold text-primary transition duration-150 ease-in-out hover:-translate-y-0.5 hover:shadow-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary disabled:cursor-not-allowed disabled:opacity-75"
+                  className="rounded-xl bg-gradient-to-br from-accent to-accent-sky px-4 py-3 text-base font-semibold text-primary transition duration-150 ease-in-out hover:-translate-y-0.5 hover:shadow-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary disabled:cursor-not-allowed disabled:opacity-75"
                 >
                   {submitting ? 'Submitting…' : 'Reserve Lifetime Access'}
                 </button>
@@ -241,7 +242,7 @@ const Landing = () => {
           <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
             {steps.map((step, index) => (
               <article key={step.title} className="glass-card-light rounded-2xl p-6">
-                <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(249,115,22,0.15)] text-base font-bold text-accent">
+                <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(94,234,212,0.16)] text-base font-bold text-accent">
                   {index + 1}
                 </span>
                 <h3 className="mb-3 text-lg font-semibold text-slate-100">{step.title}</h3>

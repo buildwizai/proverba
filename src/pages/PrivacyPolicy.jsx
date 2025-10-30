@@ -3,7 +3,7 @@ const PrivacyPolicy = () => (
     <main className="glass-card w-full max-w-4xl space-y-8 rounded-3xl px-8 py-12 shadow-card">
       <header className="space-y-2">
         <h1 className="text-3xl font-semibold text-slate-100 md:text-4xl">Privacy Policy</h1>
-        <p className="text-sm text-text-muted">Effective date: 12 May 2024 | Last updated: 12 May 2024</p>
+        <p className="text-sm text-text-muted">Effective date: 30 October 2025 | Last updated: 30 October 2025</p>
       </header>
 
       <section className="space-y-3 text-text-muted">
@@ -120,7 +120,7 @@ const PrivacyPolicy = () => (
       </section>
 
       <footer>
-        <p className="text-sm text-text-muted">Proverba © 2024. All rights reserved.</p>
+        <p className="text-sm text-text-muted">BuildWizAI © 2025. All rights reserved.</p>
       </footer>
     </main>
   </div>

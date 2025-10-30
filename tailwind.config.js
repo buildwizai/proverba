@@ -4,13 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#0f172a',
-        secondary: '#1e293b',
-        accent: '#f97316',
-        'accent-light': 'rgba(249, 115, 22, 0.15)',
+        primary: '#061226',
+        secondary: '#0d223d',
+        accent: '#5eead4',
+        'accent-light': 'rgba(94, 234, 212, 0.18)',
+        'accent-glow': 'rgba(94, 234, 212, 0.45)',
+        'accent-sky': '#38bdf8',
         text: {
-          base: '#e2e8f0',
-          muted: '#cbd5f5',
+          base: '#f1f7ff',
+          muted: '#c7d8f0',
         },
       },
       fontFamily: {
