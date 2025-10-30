@@ -1,15 +1,15 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- `landing.html` holds the full landing page markup and embedded styles; keep hero copy, pricing note, and form logic here unless you introduce a build step.
+- `index.html` holds the full landing page markup and embedded styles; keep hero copy, pricing note, and form logic here unless you introduce a build step.
 - `prd.md` captures product narrative and positioning; update it first when you adjust messaging so visual copy stays aligned.
 - `thank-you.html` serves as the Netlify post-submission confirmation page; edit copy here when the onboarding flow evolves.
 - `privacy-policy.html` documents GDPR compliance and the legal basis for processing; refresh effective dates and processors whenever data handling changes.
-- Place any future assets under `assets/` (create if missing) and reference them with relative paths from `landing.html` to keep the root tidy.
+- Place any future assets under `assets/` (create if missing) and reference them with relative paths from `index.html` to keep the root tidy.
 
 ## Build, Test, and Development Commands
-- Preview locally with `python3 -m http.server 8000` and browse to `http://localhost:8000/landing.html`; this mirrors static hosting.
-- Run a quick HTML sanity check via `npx htmlhint landing.html` if Node tooling is available; fix reported accessibility or structural issues before opening a PR.
+- Preview locally with `python3 -m http.server 8000` and browse to `http://localhost:8000/index.html`; this mirrors static hosting.
+- Run a quick HTML sanity check via `npx htmlhint index.html` if Node tooling is available; fix reported accessibility or structural issues before opening a PR.
 - To validate Netlify form parsing locally, use `netlify dev` (requires Netlify CLI) to emulate submissions before deploying.
 
 ## Coding Style & Naming Conventions

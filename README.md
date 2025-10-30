@@ -1,4 +1,4 @@
-# Proverba Landing
+# Proverba
 
 Proverba is a static landing page hosted at `https://proverba.buildwizai.com` that invites early adopters to join the app’s founding circle. The site highlights the product story, showcases social proof, and captures email sign-ups through Netlify Forms.
 
