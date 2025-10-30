@@ -11,6 +11,19 @@ const encode = (data) =>
     .join('&');
 
 function postToNetlify(formData) {
+  if (typeof window !== 'undefined') {
+    const host = window.location.hostname;
+    const isLocal =
+      host === 'localhost' ||
+      host === '127.0.0.1' ||
+      host === '[::1]' ||
+      host.endsWith('.local');
+
+    if (import.meta.env.DEV && isLocal) {
+      return Promise.resolve({ ok: true, mocked: true });
+    }
+  }
+
   return fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

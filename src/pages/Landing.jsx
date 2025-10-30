@@ -95,6 +95,7 @@ const Landing = () => {
             className="grid gap-4 text-left"
             name="subscribe"
             method="POST"
+            action="/thank-you"
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
