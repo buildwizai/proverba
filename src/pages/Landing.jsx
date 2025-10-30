@@ -72,6 +72,8 @@ const Landing = () => {
     );
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="min-h-screen bg-hero text-text-base">
       <header className="mx-auto flex max-w-5xl flex-col items-center px-6 pb-12 pt-16 text-center md:pb-16">
@@ -81,7 +83,7 @@ const Landing = () => {
           alt="Proverba logo"
         />
         <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-[rgba(94,234,212,0.16)] px-4 py-2 text-sm font-semibold tracking-wide text-accent">
-          Founding Circle Invitation
+          Daily Spark of Global Wisdom
         </span>
         <h1 className="mb-4 max-w-3xl text-3xl font-bold leading-tight md:text-5xl">
           Let One Proverb Transform the Way You Move Through Each Day
@@ -253,23 +255,33 @@ const Landing = () => {
         </section>
       </main>
 
-      <footer className="space-y-2 px-6 pb-10 text-center text-sm text-text-muted">
-        <p>
-          Proverba · Crafted for intentional moments. Questions?{' '}
-          <a className="text-accent hover:underline" href="mailto:buildwizai@gmail.com">
-            buildwizai@gmail.com
-          </a>
-        </p>
-        <p>The hero form is wired to Netlify Forms—confirm submissions are reaching your workspace before launch.</p>
-        <p>
-          <a className="text-accent hover:underline" href="/privacy-policy">
-            Privacy Policy
-          </a>{' '}
-          · Withdraw consent anytime via the unsubscribe link in every email or by writing to{' '}
-          <a className="text-accent hover:underline" href="mailto:buildwizai@gmail.com">
-            buildwizai@gmail.com
-          </a>
-          .
+      <footer className="px-6 pb-12 pt-16">
+        <div className="mx-auto flex max-w-5xl flex-col gap-8 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-8 text-center backdrop-blur-lg md:flex-row md:items-center md:justify-between md:text-left">
+          <div className="space-y-4">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[rgba(94,234,212,0.16)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              Proverba
+            </span>
+            <p className="max-w-md text-sm leading-relaxed text-text-muted md:text-base">
+              Daily contemplation to help you move with intention. Wake up to a single spark, reflect, and carry the wisdom into every conversation.
+            </p>
+          </div>
+          <div className="space-y-3 text-sm text-text-muted">
+            <div>
+              <p className="font-semibold text-text-base">Let’s stay in touch</p>
+              <a className="mt-1 inline-flex items-center gap-2 text-accent hover:underline" href="mailto:buildwizai@gmail.com">
+                buildwizai@gmail.com
+              </a>
+            </div>
+            <div>
+              <p className="font-semibold text-text-base">Essentials</p>
+              <a className="mt-1 inline-flex items-center gap-2 text-accent hover:underline" href="/privacy-policy">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
+        <p className="mt-10 text-center text-xs uppercase tracking-[0.3em] text-text-muted/70">
+          © {currentYear} Proverba · Crafted for intentional moments
         </p>
       </footer>
     </div>
