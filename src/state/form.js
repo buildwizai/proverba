@@ -1,6 +1,7 @@
 export const SUBMIT_FORM_REQUEST = 'form/submitRequest';
 export const SUBMIT_FORM_SUCCESS = 'form/submitSuccess';
 export const SUBMIT_FORM_FAILURE = 'form/submitFailure';
+export const RESET_FORM = 'form/reset';
 
 export const submitFormRequest = (payload) => ({
   type: SUBMIT_FORM_REQUEST,
@@ -15,6 +16,10 @@ export const submitFormSuccess = (email) => ({
 export const submitFormFailure = (error) => ({
   type: SUBMIT_FORM_FAILURE,
   payload: { error },
+});
+
+export const resetForm = () => ({
+  type: RESET_FORM,
 });
 
 const initialState = {
@@ -43,6 +48,8 @@ export default function formReducer(state = initialState, action) {
         submitting: false,
         error: action.payload.error,
       };
+    case RESET_FORM:
+      return initialState;
     default:
       return state;
   }
