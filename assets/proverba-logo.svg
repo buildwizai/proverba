@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Proverba Logo</title>
+  <desc id="desc">Rounded emblem with a spark and letter P for Proverba</desc>
+  <defs>
+    <linearGradient id="sparkGradient" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0%" stop-color="#fb923c" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <linearGradient id="ringGradient" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#172554" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#ringGradient)" />
+  <path d="M60 26c-16.569 0-30 13.431-30 30s13.431 30 30 30c10.949 0 20.566-5.862 25.877-14.621 1.355-2.2 2.123-4.567 2.123-7.379 0-9.94-8.06-18-18-18H55v16.2h11.2c4.091 0 7.4-3.309 7.4-7.4 0-3.997-3.203-7.2-7.2-7.2H55c-1.767 0-3.2-1.433-3.2-3.2V34.6c0-1.768 1.433-3.2 3.2-3.2h17c7.732 0 14 6.268 14 14 0 7.51-5.837 13.662-13.207 13.986-1.816.082-2.793 2.129-1.668 3.54C75.88 66.885 80 72.523 80 79.2 80 90.602 70.602 100 59.2 100c-17.17 0-31.2-14.03-31.2-31.2S42.03 37.6 59.2 37.6c4.27 0 8.328.88 12.005 2.464 1.612.696 3.471-.165 4.021-1.86.627-1.942-.328-4.028-2.227-4.784A34.2 34.2 0 0 0 60 26z" fill="#cbd5f5" />
+  <circle cx="86" cy="32" r="10" fill="url(#sparkGradient)" />
+  <path d="M86 20v-6" stroke="#fb923c" stroke-width="3" stroke-linecap="round" />
+  <path d="M95.071 23.929 99.314 19.686" stroke="#fb923c" stroke-width="3" stroke-linecap="round" />
+  <path d="M99.5 32H106" stroke="#fb923c" stroke-width="3" stroke-linecap="round" />
+  <path d="M95.071 40.071 99.314 44.314" stroke="#fb923c" stroke-width="3" stroke-linecap="round" />
+  <path d="M86 44v6" stroke="#fb923c" stroke-width="3" stroke-linecap="round" />
+  <path d="M72.686 44.314 76.929 40.071" stroke="#fb923c" stroke-width="3" stroke-linecap="round" />
+  <path d="M66 32h6.5" stroke="#fb923c" stroke-width="3" stroke-linecap="round" />
+  <path d="M72.686 19.686 76.929 23.929" stroke="#fb923c" stroke-width="3" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,27 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+
+# Node / tooling caches
+node_modules/
+.npm/
+.pnpm-store/
+.yarn-cache/
+
+# Build artifacts
+/dist/
+/build/
+netlify/functions/
+
+# Netlify CLI
+.netlify/
+
+# Local tooling
+.vscode/
+.idea/
+.env
+.env.*
+*.local
+prd.md
+netlify-email-collection-plan.md

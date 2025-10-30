@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Proverba Social Preview</title>
+  <desc id="desc">Social card featuring Proverba logo, gradient background, and tagline</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="55%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0b1120" />
+    </linearGradient>
+    <linearGradient id="spark" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0%" stop-color="#fb923c" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#f97316" flood-opacity="0.22" />
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <g transform="translate(120 150)" filter="url(#shadow)">
+    <rect width="220" height="220" rx="56" fill="#111c36" />
+    <path d="M230 60c-60.45 0-109.5 49.05-109.5 109.5S169.55 279 230 279c40.041 0 75.145-21.358 94.611-53.272 4.956-8.006 7.76-16.815 7.76-26.978 0-36.339-29.461-65.8-65.8-65.8H213v59.16h40.95c14.978 0 27.04-12.062 27.04-27.04 0-14.628-11.716-26.344-26.344-26.344H213c-6.465 0-11.7-5.235-11.7-11.7V92.02c0-6.466 5.235-11.701 11.7-11.701h64.08c29.085 0 52.68 23.595 52.68 52.68 0 28.157-21.9 51.13-49.666 52.349-6.493.295-10 7.61-5.98 12.65C291.52 224.21 304.78 250 304.78 278.36c0 41.81-33.88 75.69-75.69 75.69-41.035 0-74.32-33.285-74.32-74.32s33.285-74.319 74.32-74.319c10.858 0 21.043 2.24 30.468 6.283 4.046 1.735 8.706-.41 10.086-4.637 1.578-4.887-.826-10.125-5.585-11.998A109.41 109.41 0 0 0 230 60z" fill="#cbd5f5" transform="translate(-60,-40)" />
+    <circle cx="248" cy="64" r="36" fill="url(#spark)" transform="translate(-60,-40)" />
+  </g>
+  <g transform="translate(420 205)" fill="#f8fafc">
+    <text font-size="100" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Proverba</text>
+  </g>
+  <g transform="translate(420 320)">
+    <text font-size="42" font-family="'Inter', 'Segoe UI', sans-serif" fill="#cbd5f5">Let one proverb reshape the way you move through each day.</text>
+  </g>
+  <g transform="translate(420 410)">
+    <text font-size="32" font-family="'Inter', 'Segoe UI', sans-serif" fill="#94a3b8">Reflection prompts • Cultural provenance • Daily momentum</text>
+  </g>
+  <rect x="420" y="460" width="280" height="64" rx="32" fill="url(#spark)" />
+  <text x="560" y="504" font-size="28" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="600" fill="#0f172a" text-anchor="middle">Join the Founding Circle</text>
+</svg>
