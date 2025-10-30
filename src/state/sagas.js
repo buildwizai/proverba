@@ -15,11 +15,17 @@ function postToNetlify(formData) {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: encode({ 'form-name': 'subscribe', ...formData }),
+    redirect: 'follow',
   }).then((response) => {
-    if (!response.ok) {
-      throw new Error(`Failed to submit form (${response.status})`);
+    if (
+      response.ok ||
+      (response.status === 404 &&
+        response.redirected &&
+        response.url.includes('/thank-you'))
+    ) {
+      return response;
     }
-    return response;
+    throw new Error(`Failed to submit form (${response.status})`);
   });
 }
 
