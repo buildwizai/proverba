@@ -1,38 +1,40 @@
 # Proverba
 
-Proverba is a static landing page hosted at `https://proverba.buildwizai.com` that invites early adopters to join the app’s founding circle. The site highlights the product story, showcases social proof, and captures email sign-ups through Netlify Forms.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e73603a5-ab82-4434-8f0d-b2ec4a88d83a/deploy-status)](https://app.netlify.com/projects/proverba/deploys)
+
+Proverba is a React single-page experience built with Vite, Tailwind CSS, and a Redux + Saga stack. It invites early adopters to join the app’s founding circle, surfaces the product story, and submits emails to Netlify Forms for onboarding.
 
 ## Project Layout
-- `landing.html` – primary marketing page with inline CSS, logo hero, and Netlify form.
-- `thank-you.html` – confirmation screen shown after successful submissions.
-- `assets/` – brand visuals including `proverba-logo.svg`, `favicon.svg`, and social preview artwork.
-- `prd.md` – product requirements document outlining vision and feature roadmap.
-- `AGENTS.md` – contributor guidelines for coding style, testing, and Netlify workflow.
-- `netlify-email-collection-plan.md` – reference notes for the Netlify form setup.
-- `privacy-policy.html` – GDPR-aligned privacy notice and consent recordkeeping details.
+- `index.html` – Vite entry point and hidden Netlify form for static parsing.
+- `src/App.jsx` – client-side routing for the landing, thank-you, and privacy policy pages.
+- `src/pages/` – React pages (`Landing.jsx`, `ThankYou.jsx`, `PrivacyPolicy.jsx`) styled with Tailwind and utility helpers.
+- `src/state/` – Redux reducer, saga, and store wiring for form submissions.
+- `assets/` – static brand visuals (`proverba-logo.svg`, `favicon.svg`, social previews) copied during the Vite build.
+- `netlify-email-collection-plan.md`, `prd.md`, `AGENTS.md` – existing product and workflow references.
 
-## Local Preview
+## Getting Started
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
-Visit `http://localhost:8000/landing.html` (and `/thank-you.html`) to verify layout changes.
+Visit `http://localhost:5173` to preview the SPA. Tailwind classes hot-reload via Vite.
 
 ## Form Handling
-Netlify scans `landing.html` for the `subscribe` form (`data-netlify="true"`). Deploying the site via Netlify automatically enables email capture and redirects visitors to `thank-you.html` after submission.
+- The visible form lives in `src/pages/Landing.jsx` and dispatches `submitFormRequest` to Redux.
+- `src/state/sagas.js` encodes the payload and POSTs to Netlify (`/`) so submissions continue registering under **Forms → subscribe**.
+- A hidden static form in `index.html` keeps Netlify’s build-time parser aware of the `subscribe` schema (email + consent checkboxes + honeypot).
 
-The form includes two required checkboxes (`consent_privacy`, `consent_marketing`) to document user approval for data processing under EU GDPR and for marketing communications.
-
-To test the integration locally with Netlify CLI:
+To emulate Netlify locally:
 ```bash
 netlify dev
 ```
-Submissions appear under the **Forms → subscribe** section in the Netlify dashboard.
+Confirm submissions in the Netlify dashboard and verify the Redux/Saga flow updates the thank-you route.
 
-## Deployment Notes
-- No build step is required; publish the repository root.
-- Add Open Graph/Twitter metadata values by hosting `assets/proverba-social-card.svg` at the default path or updating the meta tags if you move assets.
-- Configure notifications or downstream automations (Zapier, Make, Airtable) in Netlify to route new sign-ups.
-- DNS currently points `proverba.buildwizai.com` to the live site; inbound privacy and support requests go to `buildwizai@gmail.com`.
+## Build & Deploy
+```bash
+npm run build
+```
+The command bundles to `dist/`. `netlify.toml` points Netlify at that output and configures an SPA redirect (`/* → /index.html`). Publish the repository root; Netlify installs dependencies, runs the Vite build, and serves `dist`.
 
 ## License
 This codebase is proprietary and not open source. Copyright © 2024 Proverba.

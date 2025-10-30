@@ -1,0 +1,26 @@
+:root {
+  color-scheme: light;
+}
+
+.bg-hero {
+  background: radial-gradient(circle at top, #1f3b73, #0f172a 58%);
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  backdrop-filter: blur(20px);
+}
+
+.glass-card-light {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.shadow-accent {
+  box-shadow: 0 12px 30px rgba(249, 115, 22, 0.3);
+}
+
+.shadow-card {
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.45);
+}
