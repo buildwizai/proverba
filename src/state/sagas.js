@@ -30,14 +30,23 @@ function postToNetlify(formData) {
     body: encode({ 'form-name': 'subscribe', ...formData }),
     redirect: 'follow',
   }).then((response) => {
+    if (response.ok) {
+      return response;
+    }
+
+    // Netlify may respond with a 302/303 redirect; treat as success.
+    if (response.status >= 300 && response.status < 400) {
+      return response;
+    }
+
+    // Some Netlify setups return a 404 but still create a submission.
     if (
-      response.ok ||
-      (response.status === 404 &&
-        response.redirected &&
-        response.url.includes('/thank-you'))
+      response.status === 404 &&
+      (response.redirected || response.url.includes('/thank-you'))
     ) {
       return response;
     }
+
     throw new Error(`Failed to submit form (${response.status})`);
   });
 }

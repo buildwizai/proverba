@@ -55,17 +55,12 @@ const Landing = () => {
   }, [submittedEmail, navigate]);
 
   const handleSubmit = (event) => {
-    if (botField.trim()) {
-      event.preventDefault();
-      return;
-    }
-
-    if (!import.meta.env.DEV) {
-      // In production let Netlify handle the POST/redirect without AJAX.
-      return;
-    }
-
     event.preventDefault();
+
+    if (botField.trim()) {
+      return;
+    }
+
     dispatch(
       submitFormRequest({
         email,
