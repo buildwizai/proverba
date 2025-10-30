@@ -94,25 +94,33 @@ const Landing = () => {
             “I never expected one line of wisdom to reset my day. Proverba became the quiet coach I open before every decision.”
           </p>
           {submittedEmail ? (
-            <div className="grid gap-4 text-left">
-              <div className="rounded-2xl border border-accent/40 bg-[rgba(249,115,22,0.12)] p-6 text-slate-900 shadow-accent">
-                <h2 className="text-xl font-semibold text-primary">You're on the list</h2>
-                <p className="mt-2 text-sm text-primary/80">
-                  Thanks for joining the Proverba founding circle. We just sent a confirmation to{' '}
-                  <strong>{submittedEmail}</strong>. Watch your inbox for the welcome packet and your first proverb drop.
-                </p>
-                <p className="mt-4 text-sm text-primary/80">
-                  Need to update your preferences? Reach the team anytime at{' '}
-                  <a className="font-semibold text-accent underline-offset-2 hover:underline" href="mailto:buildwizai@gmail.com">
-                    buildwizai@gmail.com
-                  </a>
-                  .
-                </p>
+            <div className="grid gap-6 text-left">
+              <div className="rounded-2xl border border-accent/50 bg-gradient-to-br from-[rgba(249,115,22,0.22)] via-[rgba(15,23,42,0.72)] to-[rgba(15,23,42,0.9)] p-6 shadow-[0_22px_46px_rgba(249,115,22,0.28)]">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-orange-400 text-2xl font-semibold text-primary shadow-[0_0_22px_rgba(249,115,22,0.45)]">
+                    ✓
+                  </span>
+                  <div className="space-y-3 text-text-muted">
+                    <h2 className="text-2xl font-semibold text-slate-100">You're on the list</h2>
+                    <p className="text-sm leading-relaxed sm:text-base">
+                      Thanks for joining the Proverba founding circle. We just sent a confirmation to{' '}
+                      <span className="font-semibold text-slate-100">{submittedEmail}</span>. Watch your inbox for the welcome
+                      packet and your first proverb drop.
+                    </p>
+                    <p className="text-sm leading-relaxed sm:text-base">
+                      Need to update your preferences? Reach the team anytime at{' '}
+                      <a className="font-semibold text-accent underline-offset-2 hover:underline" href="mailto:buildwizai@gmail.com">
+                        buildwizai@gmail.com
+                      </a>
+                      . We reply within one business day.
+                    </p>
+                  </div>
+                </div>
               </div>
               <button
                 type="button"
                 onClick={() => dispatch(resetForm())}
-                className="rounded-xl border border-accent/40 px-4 py-3 text-base font-semibold text-accent transition duration-150 ease-in-out hover:-translate-y-0.5 hover:shadow-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary"
+                className="rounded-xl border border-accent/50 px-4 py-3 text-base font-semibold text-accent transition duration-150 ease-in-out hover:-translate-y-0.5 hover:bg-accent/10 hover:shadow-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary"
               >
                 Add another founding-circle invite
               </button>
