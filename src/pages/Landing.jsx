@@ -107,8 +107,8 @@ const Landing = () => {
                   <div className="space-y-3 text-text-muted">
                     <h2 className="text-2xl font-semibold text-text-base">You're on the list</h2>
                     <p className="text-sm leading-relaxed sm:text-base text-text-muted">
-                      Thanks for joining the Proverba founding circle. We just sent a confirmation to{' '}
-                      <span className="font-semibold text-text-base">{submittedEmail}</span>. Watch your inbox for the welcome
+                      Thanks for joining the Proverba early access list. We just sent a confirmation to{' '}
+                    <span className="font-semibold text-text-base">{submittedEmail}</span>. Watch your inbox for the welcome
                       packet and your first proverb drop.
                     </p>
                     <p className="text-sm leading-relaxed sm:text-base text-text-muted">
@@ -126,7 +126,7 @@ const Landing = () => {
                 onClick={() => dispatch(resetForm())}
                 className="rounded-xl border border-accent/50 px-4 py-3 text-base font-semibold text-accent transition duration-150 ease-in-out hover:-translate-y-0.5 hover:bg-accent/15 hover:shadow-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary"
               >
-                Add another founding-circle invite
+                Add another early-access invite
               </button>
             </div>
           ) : (
@@ -176,6 +176,7 @@ const Landing = () => {
                     checked={consentPrivacy}
                     onChange={(event) => setConsentPrivacy(event.target.checked)}
                     required
+                    autoComplete="off"
                   />
                   <span>
                     I have read and agree to the{' '}
@@ -193,9 +194,9 @@ const Landing = () => {
                     value="yes"
                     checked={consentMarketing}
                     onChange={(event) => setConsentMarketing(event.target.checked)}
-                    required
+                    autoComplete="off"
                   />
-                  <span>I consent to receiving product emails and founding-circle marketing from Proverba.</span>
+                  <span>I consent to receiving product emails and inspirational updates from Proverba.</span>
                 </label>
                 {error && (
                   <p className="rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-2 text-sm text-red-300">

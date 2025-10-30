@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e73603a5-ab82-4434-8f0d-b2ec4a88d83a/deploy-status)](https://app.netlify.com/projects/proverba/deploys)
 
-Proverba is a React single-page experience built with Vite, Tailwind CSS, and a Redux + Saga stack. It invites early adopters to join the app’s founding circle, surfaces the product story, and submits emails to Netlify Forms for onboarding.
+Proverba is a React single-page experience built with Vite, Tailwind CSS, and a Redux + Saga stack. It invites early adopters to join the app’s early access list, surfaces the product story, and submits emails to Netlify Forms for onboarding.
 
 ## Project Layout
 - `index.html` – Vite entry point and hidden Netlify form for static parsing.

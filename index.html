@@ -12,12 +12,12 @@
   </head>
   <body>
     <div id="root"></div>
-    <form name="subscribe" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <form name="subscribe" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
       <input type="hidden" name="form-name" value="subscribe" />
-      <input id="bot-field" name="bot-field" type="text" autocomplete="off" />
-      <input type="email" name="email" required />
-      <input type="checkbox" name="consent_privacy" value="yes" />
-      <input type="checkbox" name="consent_marketing" value="yes" />
+      <input id="bot-field-shadow" name="bot-field" type="text" autocomplete="off" tabindex="-1" title="Leave this field empty" />
+      <input type="email" name="email" placeholder="you@email.com" title="Email address" autocomplete="email" />
+      <input type="checkbox" name="consent_privacy" value="yes" title="Privacy consent" autocomplete="off" />
+      <input type="checkbox" name="consent_marketing" value="yes" title="Marketing consent" autocomplete="off" />
     </form>
     <script type="module" src="/src/main.jsx"></script>
   </body>

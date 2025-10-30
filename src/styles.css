@@ -10,11 +10,14 @@
   background: rgba(7, 20, 38, 0.78);
   border: 1px solid rgba(94, 234, 212, 0.14);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .glass-card-light {
   background: rgba(7, 20, 38, 0.64);
   border: 1px solid rgba(94, 234, 212, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .shadow-accent {
@@ -23,4 +26,9 @@
 
 .shadow-card {
   box-shadow: 0 28px 70px rgba(3, 9, 18, 0.55);
+}
+
+.bubble-card {
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
 }

@@ -23,7 +23,7 @@ const PrivacyPolicy = () => (
 
       <section className="space-y-3 text-text-muted">
         <h2 className="text-xl font-semibold text-slate-100">Personal data we collect</h2>
-        <p>When you submit the founding-circle form we collect:</p>
+        <p>When you submit the early access form we collect:</p>
         <ul className="list-disc space-y-1 pl-6">
           <li>Email address</li>
           <li>Consent choices (marketing opt-in)</li>
